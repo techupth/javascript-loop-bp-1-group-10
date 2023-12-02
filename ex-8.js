@@ -85,3 +85,13 @@ let orders = [
 
 let sumPurchasedAmount = 0;
 // Start coding here
+function calculatePurchasedAmount(orders){
+  let sum = 0;
+
+  for (let i = 0; i < orders.length; i++) {
+    sum = sum + (orders[i].productPrice * orders[i].productQuantity)
+}  
+return sum;
+}
+sumPurchasedAmount = calculatePurchasedAmount(orders);
+orders.push(console.log("Total amount of the orders: " + sumPurchasedAmount + " Baht"));
