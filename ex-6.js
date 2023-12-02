@@ -82,7 +82,15 @@ let orders = [
     creditCardType: "visa-electron",
   },
 ];
-
-let birdiePurchasedAmount;
+const sumBirdie = []
+let birdiePurchasedAmount = sumBirdie;
 
 // Start coding here
+
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].customerName === "Birdie Shepland") {
+    sumBirdie.push(sumBirdie + (orders[i].productPrice * orders[i].productQuantity))
+  }
+}
+console.log(birdiePurchasedAmount)
+console.log("Total paid amount of Birdie Shepland: " + birdiePurchasedAmount + " Baht");
