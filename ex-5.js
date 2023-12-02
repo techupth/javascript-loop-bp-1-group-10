@@ -84,8 +84,23 @@ let orders = [
 ];
 
 
-let currentPurchasedAmount;
-let maxPurchasedAmount;
+// Start coding here
+function calculatePurchasedAmount(orders){
+  let sum = 0;
+
+  for (let i = 0; i < orders.length; i++) {
+    sum = sum + (orders[i].productPrice * orders[i].productQuantity)
+}  
+return sum;
+}
+let currentPurchasedAmount = calculatePurchasedAmount(orders);
+orders.push(console.log("Total amount of the orders: " + currentPurchasedAmount + " Baht"));
+
+let maxPurchasedAmount = orders[0].productPrice;
 let maxPurchasedId;
 
-// Start coding here
+for (let i = 0; i < orders.length; i++) {;
+  if (orders[i].productPrice > maxPurchasedAmount) {
+    maxPurchasedAmount = orders[i].productPrice
+  }
+};
